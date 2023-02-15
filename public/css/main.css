@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
+
+/* statics */
+body,html{
+    overflow-x: hidden;
+    position: relative;
+    font-family: "Montserrat";
+    background-color: #eceef0;
+}
+body{
+    padding-top: 100px;
+}
+.fixed-top-2 {
+    position: relative;
+    top: 50px;
+    left: 0;
+    
+}
+.drop-cats{
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+}
+.drop-cats-item img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 5px;
+    border: thin solid grey;
+}
+.drop-cats-item a{
+    color: #2D358E !important;
+    word-wrap: break-word;
+}
+.mont-font{
+    font-family: "Montserrat";
+}
+.cairo-font{
+    font-family: "Cairo";
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* Colors */
+
+.text-blue{
+    color: #2D358E !important;
+}
+.text-black{
+    color: #444444;
+}
+.text-grey{
+    color: grey;
+}
+
+.bg-blue{
+    background-color: #2D358E;
+}
+.bg-green{
+    background-color: #27a350
+}
+.text-red{
+    color: #EC1F27
+}
+
+.bg-red{
+    background-color: #EC1F27
+}
+.bg-light{
+    background-color: #eceef0;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-grey{
+    background-color: rgb(53, 53, 53);
+}
+.text-white{
+   color: white;
+}
+.f-bold{
+    font-weight: bold;
+}
+.f-bolder{
+    font-weight: bolder;
+}
+.text-lth{
+    text-decoration: line-through;
+}
+/* raduis */
+.radius-10{
+    border-radius: 10px;
+}
+.radius-20{
+    border-radius: 50px;
+}
+.radius-30{
+    border-radius: 30px;
+}
+.radius-40{
+    border-radius: 40px;
+}
+.radius-50{
+    border-radius: 50px;
+}
+
+/* Bootstrap Override */
+.navbar-brand
+    {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .dropdown-menu{
+        min-width: 2rem !important;
+        padding: 1rem;
+    }
+    .dropdown-menu li a{
+        color: #2D358E;
+        text-align: center;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+
+        margin-top: 0; /* remove the gap so it doesn't close */
+    }
+.nav-link{
+    color: grey;
+}
+
+/* Banners */
+.banner-item{
+    position: relative;
+    height: 400px;
+    background-color: #e6e6e6;
+}
+.banner-item .banner-bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(to right,#111435,#1f2244,#393d69);
+    animation: animated-bg 10s infinite ease-in-out  alternate-reverse;
+}
+@keyframes animated-bg {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.banner-item .full-image{
+    max-height: 350px;
+    object-fit: cover;
+}
+.banner-item .floating-image{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 2;
+    
+/*     animation: floating 1s infinite ease-in-out alternate-reverse ; */
+}
+
+.banner-item .caption{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 2;
+
+}.banner-item .caption{
+    color: white;
+    text-transform: uppercase;
+}
+.banner-item .caption h2{
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: -1px -1px 5px white;
+
+    animation: glowing 1s infinite ease-in-out alternate-reverse ;
+}
+@keyframes glowing {
+    from{
+        text-shadow: -1px -1px 5px #2D358E
+    }
+    to{
+        text-shadow: 2px -1px 10px white
+    }
+}
+@keyframes floating {
+    from{
+       top: -20px;
+    }
+    to{
+       top: 0px;
+    }
+}
+
+.banner-item .caption p{
+    font-size: 40px;
+    font-weight: medium;
+}
+.banner-item .caption .button-link a{
+    background: transparent;
+    border: #2D358E thin solid;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) all .2s;
+}
+.banner-item .caption .button-link a:hover{
+    background: white;
+    border: #2D358E thin solid;
+    text-decoration: none;
+    color: #2D358E;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+}
+
+
+/* FIXED IMAGES*/
+.fixed-container{
+    position: relative;
+    height: 600px;
+    width: 100%;
+}
+.fixed-image{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+background-position: center center;
+z-index: 1;
+padding: 0;
+}
+.fixed-container::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top, #111436b0,#13173f0a );
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+.fixed-container .caption{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+}
+.fixed-container .caption h5{
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.fixed-container .caption a{
+    color: white;
+    font-weight: bold;
+    transition: ease all .3s;
+}
+.fixed-container .caption a.bg-blue:hover{
+    color: white;
+    background-color: transparent;
+    border: #2D358E 3px solid;
+}
+.fixed-container .caption a.bg-red:hover{
+    color: white;
+    background-color: transparent;
+    border: #EC1F27 3px solid;
+}
+.fixed-red-rect{
+    position: absolute;
+    width: 50px;
+    height: 50%;
+    background-color: #EC1F27;
+    bottom: 0px;
+    right: 0px;
+    z-index: 3;
+    padding: 0;
+}
+.fixed-blue-rect{
+    position: absolute;
+    width: 50px;
+    height: 50%;
+    background-color: #2D358E;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    padding: 0;
+}
+/* Second Nav */
+    .second-nav-ul{
+        list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+    }
+    
+    .second-nav-ul::-webkit-scrollbar{
+        display: none;
+    }
+    .second-nav-ul li{
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding : 5px;
+        display: block;
+        white-space:nowrap;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1) all .2s;
+        position: relative;
+        min-width:0px;
+        clear: left;
+        display:block;
+        float: left;
+    }
+   
+    .second-nav-ul li:hover{
+        min-width:100px;
+        background-color: #EC1F27;
+    }
+    .second-nav-ul li.active a{
+        font-weight: bolder;
+    }
+    .second-nav-ul li a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    /* texts*/
+
+    .underline-text{
+        position: relative;
+        margin-bottom: 30px;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    .underline-text::after{
+        content: "";
+        height: 10px;
+        width: 100%;
+        background-color: #2D358E;
+        border-radius: 5px;
+        position: absolute;
+        top: 40px;
+        left: 0;
+    }
+
+
+
+
+    .product-card-simple{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       padding: 10px;
+       margin-top: 10px;
+       position: relative;
+       transition: ease-out all .5s;
+    }
+    .product-card-simple .buy{
+        position: relative;
+        opacity: 0;
+        display: none;
+        left: 50%;
+        transition: ease-out all .5s;
+    }
+    .product-card-simple .buy .fa{
+        color: #b1b1b9;
+        font-size: x-large;
+    }
+    .product-card-simple .buy .fa-shopping-cart:hover{
+        color: #2D358E;
+    }
+    
+    .product-card-simple .buy .fa-heart-o:hover{
+        color: #cf3058;
+    }
+    .product-card-simple .buy .fa-whatsapp:hover{
+        color: #54a544;
+    }
+    .product-card-simple img{ 
+        transition: ease-in-out all .5s;
+        height: 130px;
+      min-height: 130px;
+    }
+
+
+    .product-card-simple h5{
+        font-weight: bold;
+    }
+    .product-card-simple p{
+       margin-bottom: 2px;
+    }
+   
+    .product-card-simple h6{
+        font-weight: bold;
+        color: #2D358E;
+        margin-top: 2px;
+    }
+
+    .product-card-simple.hoverd{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       padding: 5px;
+       margin-top: 10px;
+    }
+    .product-card-simple.hoverd .buy{
+        position: relative;
+        opacity: 1;
+left: 0;
+visibility: visible;
+display: block;
+    }
+    
+    .product-card-simple.hoverd img{ 
+        transition: ease-in-out all .2s;
+        height: 150px;
+      min-height: 150px;
+    }
+
+
+    .product-card-simple.hoverd h5{
+        font-weight: bold;
+    }
+    .product-card-simple.hoverd p{
+       margin-bottom: 2px;
+       display: none;
+    }
+   
+    .product-card-simple.hoverd h6{
+        font-weight: bold;
+        color: #2D358E;
+        margin-top: 2px;
+        display: none;
+    }
+
+
+
+
+
+    
+    .product-card-advanced{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       padding: 10px;
+       margin-top: 10px;
+       position: relative;
+box-shadow: 1px .5px 5px 5px rgba(221, 221, 221, 0.24);
+    }
+    
+    .product-card-advanced .new-sign{
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    
+    .product-card-advanced .disscount-sign{
+        position: absolute;
+        top: 10px;
+        right: 0;
+        padding: 5px;
+        background-color: #EC1F27;
+        color: white;
+        font-weight: bolder;
+    }
+    .product-card-advanced .buy{
+        position: relative;
+        opacity: 0;
+        display: none;
+        left: 50%;
+        transition: ease-out all .5s;
+    }
+    .product-card-advanced .buy .fa{
+        color: #b1b1b9;
+        font-size: x-large;
+    }
+    .product-card-advanced .buy .fa-shopping-cart:hover{
+        color: #2D358E;
+    }
+    
+    .product-card-advanced .buy .fa-heart-o:hover{
+        color: #cf3058;
+    }
+    .product-card-advanced .buy .fa-whatsapp:hover{
+        color: #54a544;
+    }
+    .product-card-advanced .product-img{ 
+        transition: ease-in-out all .5s;
+        height: 130px;
+      min-height: 130px;
+    }
+
+
+    .product-card-advanced h5{
+        font-weight: bold;
+    }
+    .product-card-advanced p{
+       margin-bottom: 2px;
+    }
+   
+    .product-card-advanced h6{
+        font-weight: bold;
+        color: #2D358E;
+        margin-top: 2px;
+    }
+    .product-card-advanced .old-price{
+        font-size: small;
+        text-decoration: line-through;
+        color: rgb(161, 24, 24);
+    }
+    .product-card-advanced.hoverd{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       padding: 5px;
+       margin-top: 10px;
+       padding-bottom: 30px;
+    }
+    .product-card-advanced.hoverd::after{
+        bottom: 0px;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        background-color: #a3a3a3;
+    }
+    .product-card-advanced.hoverd .buy{
+        position: relative;
+        opacity: 1;
+left: 0;
+visibility: visible;
+display: block;
+    }
+    
+    .product-card-advanced.hoverd .product-img{ 
+
+        height: 150px;
+      min-height: 150px;
+    }
+
+
+    .product-card-advanced.hoverd h5{
+        font-weight: bold;
+    }
+    .product-card-advanced.hoverd p{
+       margin-bottom: 2px;
+       display: none;
+    }
+   
+    .product-card-advanced.hoverd h6{
+        font-weight: bold;
+        color: #2D358E;
+        margin-top: 2px;
+        display: none;
+    }
+
+
+    footer{
+        padding: 5%;
+        color: white;
+        background-color: #2D358E;
+
+    }
+    footer .social-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .social-links a{
+        color: white;
+    }
+   footer ul{
+    font-weight: bolder;
+    list-style: none;
+   }
+   footer ul li a{
+    font-weight: normal;
+    color: white;
+    transition: ease-in-out all .2s;
+   }
+   footer ul li a:hover{
+    margin-left: 10px;
+    color: white;
+   }
+
+
+   @media only screen and  (max-width:480px) {
+    
+/* Banners */
+.banner-item{
+    position: relative;
+    height: 300px;
+    background-color: #e6e6e6;
+}
+.banner-item .banner-bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to right,#111435,#1f2244,#393d69);
+    animation: animated-bg 10s infinite ease-in-out  alternate-reverse;
+}
+@keyframes animated-bg {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.banner-item .full-image{
+    max-height: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.banner-item .floating-image{
+    max-height:250px;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    z-index: 2;
+    
+/*     animation: floating 1s infinite ease-in-out alternate-reverse ; */
+}
+
+.banner-item .caption{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 2;
+
+}.banner-item .caption{
+    color: white;
+    text-transform: uppercase;
+}
+.banner-item .caption h2{
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: -1px -1px 5px white;
+
+    animation: glowing 1s infinite ease-in-out alternate-reverse ;
+}
+
+.banner-item .caption p{
+    font-size: 20px;
+    font-weight: medium;
+}
+.banner-item .caption .button-link a{
+    background: transparent;
+    border: #2D358E thin solid;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) all .2s;
+}
+.banner-item .caption .button-link a:hover{
+    background: white;
+    border: #2D358E thin solid;
+    text-decoration: none;
+    color: #2D358E;
+    padding: 5px;
+    border-radius: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.underline-text{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: large;
+}
+.underline-text::after{
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: #2D358E;
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+   }

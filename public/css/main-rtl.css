@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;700&display=swap');
+
+body,html{
+    overflow-x: hidden;
+    position: relative;
+    font-family: "Cairo";
+    background-color: #eceef0;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.mont-font{
+    font-family: "Montserrat";
+}
+.cairo-font{
+    font-family: "Cairo";
+}
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* Colors */
+
+.text-gold{
+    color: #EFBD25 !important;
+}
+.text-black{
+    color: #141414;
+}
+.text-grey{
+    color: grey;
+}
+
+.bg-blue{
+    background-color: #2D358E;
+}
+.bg-green{
+    background-color: #27a350
+}
+.text-red{
+    color: #EC1F27
+}
+
+.bg-red{
+    background-color: #EC1F27
+}
+.bg-light{
+    background-color: #eceef0;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-grey{
+    background-color: rgb(53, 53, 53);
+}
+.bg-black{
+    background-color: #141414 !important;
+}
+.bg-gold{
+    background-color: #EFBD25;
+}
+.text-white{
+   color: white;
+}
+.f-bold{
+    font-weight: bold;
+}
+.f-bolder{
+    font-weight: bolder;
+}
+.text-lth{
+    text-decoration: line-through;
+}
+/* raduis */
+.radius-10{
+    border-radius: 10px;
+}
+.radius-20{
+    border-radius: 50px;
+}
+.radius-30{
+    border-radius: 30px;
+}
+.radius-40{
+    border-radius: 40px;
+}
+.radius-50{
+    border-radius: 50px;
+}
+.border-gold{
+    border-bottom: thin #EFBD25 solid;
+}
+
+/* site CSS */
+
+.header{
+    height: 600px;
+    position: relative;
+   padding: 0;
+   margin-top: 0;
+}
+.header img{
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    object-position: center;
+    animation: header-animation 15s infinite ease-in-out alternate-reverse;
+    z-index: 1;
+}
+@keyframes header-animation {
+    from{
+        transform:scale(1);
+    transform-origin: 50% 100%;
+    }
+    to{
+        transform:scale(1.2);
+    transform-origin: 50% 100%;
+    }
+}
+.header .overlay1{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image:linear-gradient(to bottom, #000000,#00000000);
+    z-index: 2;
+}
+.header .overlay2{
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-image:linear-gradient(to top, #000000,#000000b7,#00000000);
+    z-index: 2;
+}
+.header .caption{
+    width: 70%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 3;
+}
+.header .caption .btn{
+    background-color: #EFBD25;
+    border-radius: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+       font-weight: bold;
+       color: white;
+}
+.header .caption .btn span{
+animation: fadeinout 1s infinite alternate-reverse;
+}
+.for-container{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+    overflow: hidden;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.for-container img{  
+      width: 100%;
+    height:500px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .4s;
+    z-index: 2;
+}
+.for-container:hover img,.overlay2{
+    transform: scale(1.3);
+    transform-origin: 50% 50%;
+
+}
+.for-container .overlay2{
+    height: 500px;
+    width: 100% ;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-image:linear-gradient(to top, #000000,#00000000);
+
+    transform: scaleX(-15px);
+    z-index: 3;
+}
+.for-container .caption{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-050%);
+    color: white;
+    z-index: 4;
+    text-align: center;
+}
+.for-container .caption .btn{
+    background-color: transparent;
+    border: thin solid #EFBD25;
+    color: white;
+    border-radius: 5px;
+    transition: ease all .2s;
+}
+.for-container .caption .btn:hover{
+    background-color: #EFBD25;
+    border: none;
+    color: white;
+}
+.navbar{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+}
+.navbar-collapse{
+    background-color: transparent;
+}
+.nav-item .nav-link{
+    color: white;
+}
+.dropdown-menu
+{
+    max-height: 300px;
+    max-width: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.dropdown-menu::-webkit-scrollbar{
+    background-color: #141414;
+    width: 5px;
+}
+.dropdown-menu::-webkit-scrollbar-track{
+    background-color: #EFBD25;
+}
+.dropdown-item .nav-link{
+    color: #141414;
+}
+.nav-item.active .nav-link{
+    color: #EFBD25;
+    font-weight: bolder;
+}
+.first-nav{
+    margin-right: 50px;
+}
+
+
+.underline-text{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.underline-text::after{
+    content: "";
+    height: 10px;
+    width: 100%;
+    background-color: #141414;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+.product-content h5{
+    word-wrap: break-word;
+    max-lines: 2;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.product-image{
+    position: relative;
+}
+.product-image img{
+    display: block;
+    height: 200px;width:auto;
+    max-width: 110%;
+    transition: transform .2s ease-in-out;
+    margin-right: auto;
+    margin-left: auto;
+}
+.product-image:hover img{
+    transform: scale(1.1);
+    transform-origin: 50%  50%;
+}
+
+footer{
+    padding: 8%;
+    color: white;
+    background-color: #141414;
+
+}
+footer .social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+footer .social-links a{
+    color: white;
+}
+footer ul{
+font-weight: bolder;
+text-transform: uppercase;
+list-style: none;
+color: #EFBD25;
+font-weight: bolder;
+}
+footer ul li a{
+font-weight: normal;
+color: white;
+transition: ease-in-out all .2s;
+}
+footer ul li a:hover{
+margin-right: 10px;
+color: white;
+}
+
+
+
+@keyframes fadeinout {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

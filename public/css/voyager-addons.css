@@ -1,0 +1,14 @@
+.control-label{
+    color: rgb(63, 63, 63);
+    font-weight: bold;
+}
+ul.radio li{
+    display: inline;
+    width: auto;
+}
+.specs{
+    margin-top: 20px;
+}
+.specs label{
+    color: rgb(50, 50, 121);
+}
